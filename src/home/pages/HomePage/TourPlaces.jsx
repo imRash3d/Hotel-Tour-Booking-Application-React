@@ -1,7 +1,34 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
+import Package from "../../components/TourPackage";
 class TourPlaces extends Component {
   state = {
+    packages: [
+      {
+        id: 1,
+        name: "Londol , UK",
+        listing_count: 10,
+        bg_img: ""
+      },
+      {
+        id: 2,
+        name: "Italy , Venis",
+        listing_count: 10,
+        bg_img: ""
+      },
+      {
+        id: 3,
+        name: "Paris , Italy",
+        listing_count: 10,
+        bg_img: ""
+      },
+      {
+        id: 4,
+        name: "Lion , Singapur ",
+        listing_count: 10,
+        bg_img: ""
+      }
+    ],
     style: {
       backgroundImage:
         "url(https://images.unsplash.com/photo-1546847924-c44381c9e09c)"
@@ -22,23 +49,11 @@ class TourPlaces extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="destination-slider owl-carousel ftco-animate">
-                <div className="item col-md-4 ">
-                  <div className="destination">
-                    <Link
-                      to=""
-                      className="img d-flex justify-content-center align-items-center"
-                      style={this.state.style}
-                    >
-                      <div className="icon d-flex justify-content-center align-items-center">
-                        <span className="icon-search2" />
-                      </div>
-                    </Link>
-                    <div className="text p-3">
-                      <h3>Paris, Italy</h3>
-                      <span className="listing">15 Listing</span>
-                    </div>
+                {this.state.packages.map(item => (
+                  <div key={item.id} className="item col-md-4 ">
+                    <Package item={item} />
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ class App extends Component {
       <div>
         <Header />
         <Overly />
-        <Home />
+        <RouteFile />
         <Footer />
       </div>
     );

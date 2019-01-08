@@ -20,6 +20,16 @@ class Header extends Component {
                   Home
                 </Link>
               </li>
+              <li className="nav-item ">
+                <Link to="tours" className="nav-link">
+                  Tours
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link to="about" className="nav-link">
+                  About
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

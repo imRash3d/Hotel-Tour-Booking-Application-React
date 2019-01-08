@@ -8,10 +8,10 @@ class Overly extends Component {
   };
   render() {
     return (
-      <div className="hero-wrap js-fullheight" style={this.state.style}>
+      <div className="hero-wrap pt-5  js-fullheight" style={this.state.style}>
         <div className="overlay" />
         <div className="container">
-          <div className="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div className="row mt-5 pt-5  no-gutters slider-text js-fullheight align-items-center justify-content-center">
             <div className="col-md-9 ftco-animate text-center">
               <p className="breadcrumbs">
                 <span className="mr-2">
