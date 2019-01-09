@@ -4,7 +4,7 @@ import TourPackage from "./TourPackages";
 import Blog from "./Blog";
 import Hotels from "./TopHotels";
 
-class Home extends Component {
+class HomePage extends Component {
   state = {};
   render() {
     return (
@@ -18,4 +18,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default HomePage;

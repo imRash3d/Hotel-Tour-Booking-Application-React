@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const Package = props => {
+  console.log(props)
   return (
     <div className="destination">
       <Link

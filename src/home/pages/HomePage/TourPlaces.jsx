@@ -3,38 +3,38 @@ import React, { Component } from "react";
 import Package from "../../components/TourPackage";
 class TourPlaces extends Component {
   state = {
-    packages: [
-      {
-        id: 1,
-        name: "Londol , UK",
-        listing_count: 10,
-        bg_img:
-          "url(https://images.unsplash.com/photo-1518134346374-184f9d21cea2)"
-      },
-      {
-        id: 2,
-        name: "Italy , Venis",
-        listing_count: 10,
-        bg_img:
-          "url(https://images.unsplash.com/photo-1526677504211-233c8477c61b)"
-      },
-      {
-        id: 3,
-        name: "Paris , Italy",
-        listing_count: 10,
-        bg_img:
-          "url(https://images.unsplash.com/photo-1519501025264-65ba15a82390)"
-      },
-      {
-        id: 4,
-        name: "Lion , Singapur ",
-        listing_count: 10,
-        bg_img:
-          "url(https://images.unsplash.com/photo-1520106212299-d99c443e4568)"
-      }
-    ]
+    packages: []
   };
+
+  getPlaces() {
+    const data = fetch(
+      "https://trabel-booking.firebaseio.com/listing_places.json"
+    );
+    data
+      .then(res => {
+        return res.json();
+      })
+      .then(res => {
+        for (const c in res) {
+          const obj = {
+            id: c,
+            name: res[c].name,
+            listing_count: res[c].listing_count,
+            bg_img: `url(${res[c].bg_img})`
+          };
+          this.state.packages.push(obj);
+          this.setState({packages:this.state.packages})
+        }
+      });
+  }
+ constructor(){
+   super();
+   this.getPlaces();
+ 
+  // console.log(this.state.packages)
+ }
   render() {
+
     return (
       <section className="ftco-section ftco-destination">
         <div className="container">
