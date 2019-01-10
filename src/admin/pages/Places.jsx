@@ -5,7 +5,6 @@ class Places extends Component {
     places: []
   };
   getPlaces() {
-      console.log('c')
     const data = fetch(
       "https://trabel-booking.firebaseio.com/listing_places.json"
     );
