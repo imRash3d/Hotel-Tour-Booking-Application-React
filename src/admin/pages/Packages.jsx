@@ -33,6 +33,9 @@ class Packages extends Component {
   render() {
     return (
       <div className="container">
+        <div className="row justify-content-end">
+          <button className="btn col-md-2 m-3 btn-primary">Add New</button>
+        </div>
         <div className="row">
           <div className="col-md-12">
             <PackageTable packages={this.state.packages} />

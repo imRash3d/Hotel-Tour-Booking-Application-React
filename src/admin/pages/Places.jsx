@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Table from "../components/Table";
+import AddForm from "../components/addForm";
 class Places extends Component {
   state = {
     places: []
@@ -31,6 +32,9 @@ class Places extends Component {
   render() {
     return (
       <div className="container">
+        <div className="row justify-content-end">
+          <button className="btn col-md-2 m-3 btn-primary">Add New</button>
+        </div>
         <div className="row">
           <div className="col-md-12">
             <Table places={this.state.places} />
