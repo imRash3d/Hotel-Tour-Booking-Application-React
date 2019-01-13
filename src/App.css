@@ -2,3 +2,7 @@
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+.pointer {
+  cursor: pointer;
+}

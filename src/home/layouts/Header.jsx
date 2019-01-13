@@ -16,17 +16,17 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="ftco-nav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
-                <Link to="home" className="nav-link">
+                <Link to="/home" className="nav-link">
                   Home
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link to="tours" className="nav-link">
+                <Link to="/tours" className="nav-link">
                   Tours
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link to="about" className="nav-link">
+                <Link to="/about" className="nav-link">
                   About
                 </Link>
               </li>

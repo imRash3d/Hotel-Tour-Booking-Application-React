@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import PackageTable from "../components/PackageTable";
+import Alert from "../../modules/Alert";
 class Packages extends Component {
   state = {
+    isSuccess: false,
     packages: []
   };
   getPackages() {
@@ -22,6 +25,7 @@ class Packages extends Component {
             rating: res[c].rating,
             bg_img: res[c].bg_img
           };
+
           this.state.packages.push(obj);
           this.setState({ packages: this.state.packages });
         }
@@ -30,15 +34,43 @@ class Packages extends Component {
   componentDidMount() {
     this.getPackages();
   }
+  onSuccess() {
+    // this.setState({
+    //   isSuccess: true
+    // });
+    // // setTimeout(() => {
+    // //   this.setState(
+    // //     {
+    // //       success: false
+    // //     },
+    // //     3000
+    // //   );
+    // // });
+    // // this.state.success = true;
+    // console.log("sss");
+  }
   render() {
     return (
       <div className="container">
         <div className="row justify-content-end">
-          <button className="btn col-md-2 m-3 btn-primary">Add New</button>
+          <div className="colmd-">
+            {this.state.isSuccess && (
+              <Alert title={"Item Deleted Successfully"} />
+            )}
+          </div>
+          <Link
+            to="/admin/packages/add"
+            className="btn col-md-2 m-3 btn-primary"
+          >
+            Add New
+          </Link>
         </div>
         <div className="row">
           <div className="col-md-12">
-            <PackageTable packages={this.state.packages} />
+            <PackageTable
+              onSuccess={this.onSuccess}
+              packages={this.state.packages}
+            />
           </div>
         </div>
       </div>

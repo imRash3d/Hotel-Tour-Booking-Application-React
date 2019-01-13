@@ -11,8 +11,8 @@ class HomePage extends Component {
       <div>
         <TourPlaces />
         <TourPackage />
-        <Hotels />
-        <Blog />
+        {/* <Hotels /> */}
+        {/* <Blog /> */}
       </div>
     );
   }

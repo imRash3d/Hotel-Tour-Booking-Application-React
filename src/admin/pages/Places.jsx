@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Table from "../components/Table";
-import AddForm from "../components/addForm";
+import { Link } from "react-router-dom";
 class Places extends Component {
   state = {
     places: []

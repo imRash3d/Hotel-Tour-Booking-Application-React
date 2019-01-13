@@ -19,7 +19,7 @@ class Overly extends Component {
                 </span>
                 <span>Blog</span>
               </p>
-              <h1 className="mb-3 bread">Tips &amp; Articles</h1>
+              <h1 className="mb-3 bread">Make My Trip</h1>
             </div>
           </div>
         </div>
